@@ -11,7 +11,9 @@ php artisan storage:link
 
 ### CONFIGURACAO .ENV ###
 
-###     Na parte de APP_URL, deverá colocar em qual URL sua API irá estar ativa, como por exemplo;
+### No projeto terá um .env.example. Copiar esse arquivo e criar um chamado .env;
+
+###     Na parte de APP_URL, deverá colocar em qual URL sua API irá estar ativa, como por exemplo (a porta também deverá ser colocada aqui);
 ```
 APP_URL=http://localhost:8000
 ```
