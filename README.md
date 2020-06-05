@@ -11,10 +11,12 @@ php artisan storage:link
 
 ### CONFIGURACAO .ENV ###
 
-###     Na parte de APP_URL, deverá colocar em qual URL sua API irá estar ativa, como por exemplo "APP_URL=http://localhost:8000";
+###     Na parte de APP_URL, deverá colocar em qual URL sua API irá estar ativa, como por exemplo";
+```
+APP_URL=http://localhost:8000
+```
 
-###     Na parte de APP_URL, deverá informar qual banco de dados você irá utilizar, no caso, "perfil-gc", juntamente com o usuário e senha
-###     em DB_USERNAME e DB_PASSWORD respectivamente;
+###     Na parte de APP_URL, deverá informar qual banco de dados você irá utilizar, no caso, "perfil-gc", juntamente com o usuário e senha em DB_USERNAME e DB_PASSWORD respectivamente;
 
 ###     Se APP_KEY não estiver preenchida, rodar o comando a seguir;
 ```
