@@ -5,7 +5,7 @@ composer install
 
 ### Linkar o Storage para funcionar troca de avatar
 ```
-php artisan storage:link (para linkar o storage e funcionar a troca de avatar)
+php artisan storage:link
 ```
 
 ### Para criação do banco de dados, deverá rodar a migrate para instalação da tabela utilizada;
