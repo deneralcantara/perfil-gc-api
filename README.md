@@ -3,11 +3,6 @@
 composer install
 ```
 
-### Linkar o Storage para funcionar troca de avatar
-```
-php artisan storage:link
-```
-
 
 ### CONFIGURACAO .ENV ###
 
@@ -23,6 +18,11 @@ APP_URL=http://localhost:8000
 ###     Se APP_KEY não estiver preenchida, rodar o comando a seguir;
 ```
 php artisan key:generate
+```
+
+### Linkar o Storage para funcionar troca de avatar
+```
+php artisan storage:link
 ```
 
 ### Para criação do banco de dados, deverá rodar a migrate para instalação da tabela utilizada; Para esse comando funcionar, o banco de dados com o nome configurado no .env já deve estar criado;
