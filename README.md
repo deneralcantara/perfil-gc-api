@@ -23,7 +23,7 @@ APP_URL=http://localhost:8000
 php artisan key:generate
 ```
 
-### Para criação do banco de dados, deverá rodar a migrate para instalação da tabela utilizada;
+### Para criação do banco de dados, deverá rodar a migrate para instalação da tabela utilizada; Para esse comando funcionar, o banco de dados com o nome configurado no .env já deve estar criado;
 ```
 php artisan migrate
 ```
