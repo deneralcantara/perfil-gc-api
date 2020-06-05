@@ -1,6 +1,10 @@
 ### Para execução do projeto, rodar o comando
 ```
 composer install
+```
+
+### Linkar o Storage para funcionar troca de avatar
+```
 php artisan storage:link (para linkar o storage e funcionar a troca de avatar)
 ```
 
