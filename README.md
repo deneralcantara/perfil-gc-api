@@ -1,4 +1,4 @@
-### Para execução do projeto, rodar o comando
+### Para instalação do projeto, rodar o comando
 ```
 composer install
 ```
