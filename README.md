@@ -14,7 +14,7 @@ php artisan migrate
 ```
 
 
-### ---------- CONFIGURACAO ---------- .ENV ###
+### CONFIGURACAO .ENV ###
 
 ###     Na parte de APP_URL, deverá colocar em qual URL sua API irá estar ativa, como por exemplo "APP_URL=http://localhost:8000";
 
