@@ -8,11 +8,6 @@ composer install
 php artisan storage:link
 ```
 
-### Para criação do banco de dados, deverá rodar a migrate para instalação da tabela utilizada;
-```
-php artisan migrate
-```
-
 
 ### CONFIGURACAO .ENV ###
 
@@ -26,7 +21,10 @@ php artisan migrate
 php artisan key:generate
 ```
 
-### ---------- CONFIGURACAO ---------- .ENV ###
+### Para criação do banco de dados, deverá rodar a migrate para instalação da tabela utilizada;
+```
+php artisan migrate
+```
 
 
 
