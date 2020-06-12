@@ -3,26 +3,15 @@
 composer install
 ```
 
-
 ### CONFIGURACAO .ENV ###
 
-### No projeto terá um .env.example. Copiar esse arquivo e criar um chamado .env;
+### No projeto terá um .env.example. Ele está exatamente como a API precisa rodar. Copiar esse arquivo e criar um chamado .env;
 
-###     Na parte de APP_URL, deverá colocar em qual URL sua API estará ativa (a porta também deverá ser colocada aqui);
-```
-APP_URL=http://localhost:8000
-```
+### Antes de começar a rodar os comandos, já deve existir um banco de dados com o nome "perfil-gc" criado;
 
-###     Na parte de DB_DATABASE, deverá informar qual banco de dados você irá utilizar, no caso, "perfil-gc", juntamente com o usuário e senha em DB_USERNAME e DB_PASSWORD respectivamente;
-
-###     Se APP_KEY não estiver preenchida, rodar o comando a seguir;
+###     Se APP_KEY (dentro do arquivo .env) não estiver preenchida, rodar o comando a seguir;
 ```
 php artisan key:generate
-```
-
-### Linkar o Storage para funcionar troca de avatar
-```
-php artisan storage:link
 ```
 
 ### Para criação do banco de dados, deverá rodar a migrate para instalação da tabela utilizada; Para esse comando funcionar, o banco de dados com o nome configurado no .env já deve estar criado;
@@ -30,9 +19,19 @@ php artisan storage:link
 php artisan migrate
 ```
 
-
-
 ### Para rodar a API, deverá executar o comando a seguir;
 ```
 php artisan serve --host=0.0.0.0
 ```
+
+### A API estará rodando com o seu IP; Você pode consultar o seu IP utilizando o comando ipconfig no console do windows; Não se esqueça de utilizar a porta padrão do laravel (:8000) como o exemplo abaixo;
+```
+http://192.168.1.4:8000/api
+```
+
+### Também é possível acessar os dados através de 
+```
+http://localhost:8000/api
+```
+
+### Esse endereço consultado via comando no windows deve estar presente no arquivo ENV.JS do client;
