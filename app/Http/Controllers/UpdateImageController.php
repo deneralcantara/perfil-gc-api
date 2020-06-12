@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 use App\UserImage;
-use Storage;
 
 class UpdateImageController extends Controller
 {
@@ -16,16 +16,21 @@ class UpdateImageController extends Controller
 
             $extension = $file->getClientOriginalExtension();
 
-            $path = "media/images";
+            // $path = "media/images";
+
+            //Salvar imagem no S3 da Amazon
+            $path = Storage::disk('s3')->put('images', $file);
+
+            $url = env("AWS_URL") . $path;
 
             # SALVAR ARQUIVO EM STORAGE/PUBLIC/MEDIA/USERS/...
-            $saved = explode('/', Storage::disk('local')->put('/public/media', $file));
+            // $saved = explode('/', Storage::disk('local')->put('/public/media', $file));
 
-            # TROCAR O PUBLIC DA URL POR STORAGE
-            $saved[0] = '/storage';
+            // # TROCAR O PUBLIC DA URL POR STORAGE
+            // $saved[0] = '/storage';
 
-            # CRIAR URL
-            $url = env('APP_URL') . implode('/', $saved);
+            // # CRIAR URL
+            // $url = env('APP_URL') . implode('/', $saved);
 
             $userimage = UserImage::where('user_id', $id)->first();
 
